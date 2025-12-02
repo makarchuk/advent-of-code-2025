@@ -21,6 +21,12 @@ fn main() {
             let result = task.run(&input, part);
             println!("Result: {}", result);
         }
+        (2, part) => {
+            let task = tasks::day2::Task {};
+            let result = task.run(&input, part);
+            println!("Result: {}", result);
+        }
+
         _ => println!("Task not implemented"),
     }
 }
