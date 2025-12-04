@@ -1,4 +1,6 @@
 use clap::Parser;
+mod grid;
+mod point;
 mod tasks;
 use tasks::task::Task;
 
@@ -28,6 +30,11 @@ fn main() {
         }
         (3, part) => {
             let task = tasks::day3::Task {};
+            let result = task.run(&input, part);
+            println!("Result: {}", result);
+        }
+        (4, part) => {
+            let task = tasks::day4::Task {};
             let result = task.run(&input, part);
             println!("Result: {}", result);
         }
