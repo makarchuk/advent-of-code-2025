@@ -1,7 +1,4 @@
-use crate::{
-    point::Point,
-    tasks::task::{Task, TaskInput},
-};
+use crate::{point::Point, tasks::task::TaskInput};
 
 #[derive(Debug, Clone)]
 pub struct Grid<T: Copy> {
