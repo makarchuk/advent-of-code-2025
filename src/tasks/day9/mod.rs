@@ -236,7 +236,11 @@ impl Part2Solver {
                         state = ScanningState::AlongTheEdge
                     }
                     (ScanningState::Outside, BorderType::Green) => state = ScanningState::Inside,
-                    (ScanningState::AlongTheEdge, BorderType::Red) => state = ScanningState::Inside,
+                    (ScanningState::AlongTheEdge, BorderType::Red) => {
+                        //we actually have no idea here, need to figure out how to combine the result of two scans
+                        // in such a way that we'll know whether or not we're inside at this point
+                        state = ScanningState::Inside
+                    }
                     (ScanningState::AlongTheEdge, BorderType::Green) => {
                         unreachable!(
                             "Edge should end with red tile. Got green: line: {:?}, point: {:?}",
